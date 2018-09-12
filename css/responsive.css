@@ -1,0 +1,136 @@
+
+/*
+* Mate - Bluma Fungry Template Responsive css
+
+
+
+
+/*
+    small-mobile: from to 360px
+    mobile: up to 768px
+    tablet: from 769px
+    desktop: from 1024px
+    widescreen: from 1216px
+    fullhd: from 1408px
+*/
+
+
+
+/* On screens that are 1408px wide or less */
+@media screen and (max-width: 1408px) {
+    body {
+      
+    }
+}
+
+/* On screens that are 1216px wide or less */
+@media screen and (max-width: 1216px) {
+    body {
+      
+    }
+}
+
+
+/* On screens that are 1024px wide or less */
+@media screen and (max-width: 1024px) {
+   body {
+    font-family: "ProximaNova";
+    font-size: 14px;
+}
+       .sticky-nav-panier-counter {
+	
+	padding: 2px 8px;
+	border: 1px solid #ff6e57;
+	border-radius: 50%;
+	font-size: 12px;
+	position: relative;
+	left: 18px;
+	bottom: -4px;
+	width: 25px;
+	top: -20px;
+}
+    .food-list{
+    padding: 0 5%;
+}
+    .section-restaurants .heading-resto{
+    
+    text-align: center;
+}
+   .login-form {
+    padding: 5% 10%;
+    
+}
+
+    
+}
+
+/* On screens that are 769px wide or less */
+@media screen and (max-width: 769px) {
+      body {
+    font-family: "ProximaNova";
+    font-size: 14px;
+}
+    .intro-logo {
+        left:-13px;
+        
+    }  
+    .section-restaurants{
+        text-align: center;
+    }
+
+.section-searchbar{
+    padding:25% 5%;
+    padding-bottom: 1%;
+}
+
+    
+}
+
+
+
+/* On screens that are 992px wide or less */
+@media screen and (max-width: 768px) {
+    body {
+       
+    }
+    .section-food {
+    
+}
+    .footer-logo {
+	padding-left: 0px;
+}
+    .footer  ul  li {
+    
+    padding-left: 0%;
+}
+    
+ 
+
+}
+
+/* On screens that are px wide or less */
+@media screen and (max-width: 360px) {
+ 
+        .text-intro > p {
+    font-size: 150%;
+}
+    
+    .resto  > h2,
+    .resto  > h3,
+    .resto  > p{
+	 text-align: left;
+        
+}
+    .section-restaurants{
+        text-align:inherit;
+    }
+     .section-restaurants{
+    padding: 40px 30px;
+    
+}
+    .section-searchbar{
+    padding:30% 5%;
+    padding-bottom: 1%;
+}
+    
+}

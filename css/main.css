@@ -1,0 +1,850 @@
+/*
+* Mate - Bluma Fungry Template
+
+*/
+/* ------------------------------------- */
+/* TABLE OF CONTENTS
+/* -------------------------------------
+  1. IMPORT GOOGLE FONTS
+  2. GENERAL
+    -2.1 SECTION TITLE
+    -2.2 BUTTONS
+    -2.3 SOCIAL ICON
+    -2.4 PRE LOADER
+    -2.5 SCROLL TO UP
+  3. NAVBAR 
+  4. INTRO SECTION
+  4. HERO SECTION
+  5. RESTAURANT SECTION
+  6. DELIVERY SECTION
+  7. FOOTER SECTION
+  ------------------------------------- */
+/* ==========================================================================
+   1. IMPORT GOOGLE FONTS
+   ========================================================================== */
+@font-face {
+  font-family: "ProximaNova";
+  src:       url(../fonts/ProximaNova-Regular.otf),
+
+      url(../fonts/ProximaNova-Bold.otf),
+       url(../fonts/ProximaNova-Light.otf),
+       url(../fonts/ProximaNova-Semibold.otf);
+}
+
+/* ==========================================================================
+   2. GENERAL
+   ========================================================================== */
+
+
+body {
+    font-family: "ProximaNova";
+    font-size: 16px;
+}
+h2{
+    font-weight: bold;
+    
+}
+h3{
+    font-weight: 300;
+}
+section {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.btn-fun-co {
+    background-color: #53a2bd !important;
+    border-radius: 2px;
+    border-color: #53a2bd;
+    color: #fff;
+    font-size: 100% !important;
+    font-weight: bold;
+}
+
+.btn-fun-co:hover {
+    background-color: #fff !important;
+    border-radius: 2px;
+    color: #000;
+}
+
+.btn-fun-co-lg{
+     background-color: #53a2bd !important;
+    border-radius: 2px;
+    border-color: #53a2bd;
+    color: #fff;
+    font-size: 120% !important;
+ 
+    
+}
+.btn-fun-co-lg:hover{
+     background-color: #fff !important;
+        border-radius: 2px;
+    color: #000;
+    
+}
+
+
+
+.color{
+    color:#53a2bd;
+}
+
+
+
+.btn-fun-li {
+    border-radius: 2px;
+    background-color: #fff;
+     font-size: 100% !important;
+    font-weight: bold;
+
+}
+
+.btn-fun-li-lg {
+    border-radius: 2px;
+    background-color: #fff;
+     font-size: 120% !important;
+
+}
+
+a{
+    color:#000;
+}
+
+a:hover{
+    color: #53a2bd;
+
+}
+
+
+input {
+    border-radius: 2px !important; 
+    color: #b5b5b5 !important;
+}
+
+ h1 {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+
+
+/*re defining  the  nav menu*/
+.navbar-burger {
+
+    cursor: pointer;
+    display: block;
+    height: 2.25rem;
+    position: relative;
+    width: 3.25rem;
+    margin-left: auto;
+    top: -40px;
+
+}
+
+/* ==========================================================================
+   3. INTRO SECTION
+   ========================================================================== */
+
+
+.bg-intro {
+	background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.65)),url("../img/background.jpg");
+    padding: 50px;
+    
+    background-size: cover;
+    height: 75vh;
+    background-position: center;
+    
+}
+.navbar-intro{
+	background-color: transparent;
+}
+.text-intro {
+	color: #fff;
+}
+
+.text-intro > p {
+    font-size: 140%;
+    
+}
+
+.intro-input  input{
+	color: #000;
+}
+
+.navbar-item img {
+    max-height: none;
+}
+.text-btn a{
+	font-size: 120% !important;
+    
+    color: #fff;
+}
+.text-btn  a:hover{
+    color: #000;
+	
+}
+
+
+.intro-text {
+    padding-top: 20px;
+}
+.intro-input input {
+    padding: 19px 0px;
+}
+
+.intro-input input icon i {
+    color: #000 !important;
+    
+}
+.intro-logo {
+    position: relative;
+    left: 5px;
+    width:200px; 
+}
+
+
+.hidden{
+    display: none;
+	
+}
+
+.stick {
+ border-bottom: 0px solid #000;
+}
+
+.sticky-input{
+    border-radius: 1px;
+    color: #a8a8a8 !important;
+}
+
+.sticky-nav-head {
+      box-shadow:0px 0px 3px 0.5px #797676 !important;
+}
+
+.sticky-logo-head{
+    width: 150px;
+    
+    position: relative;
+    top: 5%
+}
+
+
+.sticky-nav-position{
+    
+    position: relative !important;
+    top: 8% !important;
+}
+.sticky-nav-panier {
+    width:25px;
+ 
+    
+}
+.sticky-nav-shadow {
+	box-shadow:0px 0px 3px 0.5px #797676 !important;
+}
+
+.sticky-nav-panier-counter {
+	background-color: #53a2bd;
+	color: #fff;
+	font-weight: bold;
+	padding: 2px 8px;
+	border: 1px solid #53a2bd;
+	border-radius: 50%;
+	font-size: 12px;
+	position: relative;
+	left: -6px;
+	bottom: -4px;
+	width: 25px;
+}
+
+.sticky-search {
+    position: relative; 
+    top: 9%;
+}
+
+.sticky-button{
+    position: relative;
+    top: -5%;
+}
+
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
+
+.section-hero{
+    background-color: #f5f5f5;
+    padding: 70px 0px;
+}
+.text-hero{
+    text-align: center;
+}
+
+.text-hero h2 {
+    font-weight: bold;
+	
+}
+.text-hero img {
+    width:40px;
+}
+
+
+
+/* ==========================================================================
+   5. RESTAURANT SECTION
+   ========================================================================== */
+
+
+.section-restaurants{
+    padding: 40px 0px;
+    
+}
+
+.section-restaurants .heading-resto{
+    font-size: 150%;
+    padding-bottom: 30px;
+    text-align: left;
+}
+.resto {
+	padding: 0px 0px;
+}
+.resto h2{
+    font-size:125%;
+} 
+.resto h3 {
+    font-weight: bold;
+    font-size:100%;
+    
+}
+.resto p {
+    font-weight: bold;
+    color: #53a2bd;
+}
+.resto img {
+	 padding: 10px 0px;
+    width: 368px;
+    border:2px solid #fff;
+    border-radius: 15px;
+    height: 268px;
+     
+}
+
+
+
+/* ==========================================================================
+   5. Bike SECTION
+   ========================================================================== */
+
+
+.heading-votes{
+    font-size: 250%;
+}
+
+
+/* ==========================================================================
+   6. footer SECTION
+   ========================================================================== */
+
+footer {
+    padding: 80px 0px;
+    padding-bottom:80px !important;
+    background-color: #000;
+    color:#fff;
+    font-weight: 300;
+    
+}
+.footer {
+    background-color: #000;
+}
+
+.footer  ul  li {
+    font-weight: 300;
+    padding: 5px 0px;
+    text-align: left;
+    
+}
+.footer ul  li  a {
+    color: #fff;
+	 
+}
+.footer ul li  a:hover{
+    color:#53a2bd;
+}
+
+.footer section {
+    text-align: center;
+}
+.footer-bottom{
+    background-color: #424242;
+    padding: 5px 0px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/* ==========================================================================
+   6. LOGIN  PAGE
+   ========================================================================== */
+
+.login-form {
+    text-align: left;
+    padding: 5% 0%;
+    
+}
+.login-fields{
+    padding-bottom: 30px;
+    
+}
+.login-fields a img{
+    padding-bottom: 50px;
+    
+}
+.login-fields h1 {
+    font-weight: 200;
+    font-size: 162.5%;
+}
+
+/* ==========================================================================
+   6. REGISTER  PAGE
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   6. ORDER  PAGE
+   ========================================================================== */
+
+.section-searchbar{
+    padding:10% 5%;
+    padding-bottom: 1%;
+}
+
+.section-food h1{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.food-list{
+    padding: 0px;
+}
+
+.section-food {
+    padding: 3% 0%;
+    
+}
+.food-heading{
+    padding-bottom: 35px;
+}
+
+.food-more a{
+    color: #53a2bd !important;
+    font-weight: bold;
+}
+
+.food-more {
+    padding-bottom: 5%;
+    
+}
+.footer-logo {
+	
+}
+
+
+
+
+
+
+/* ==========================================================================
+   6. RESTAUARANT   PAGE
+   ========================================================================== */
+
+
+.section-restaurants-food{
+  	background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("../img/armando-ascorve-morales-155473-unsplash.jpg");
+    padding: 50px;
+    
+    background-size: cover;
+    height: 75vh;
+    background-position: center;
+    
+    
+}
+.restaurant-info {
+background-color: #fff;
+
+border: 1px solid #fff;
+
+border-radius: 8px;
+
+padding: 20px 50px;
+
+position: relative;
+
+top: 60%;
+}
+.restaurant-info > h1 {
+    font-size: 180%;
+}
+.restaurant-info >h2 {
+    padding-top: 5%;
+	
+}
+.restaurant-info > h3 {
+    font-weight: bold;
+    color: #53a2bd;
+        padding-top: 5%;
+
+	
+}
+
+
+
+
+
+
+.section-restauant-food-menu{
+border-bottom: 1px  solid #ececec;
+}
+
+.section-restauant-food-menu .nav-menu{
+  	border-bottom: 3px solid #000;
+}
+
+.section-restauant-food-menu .nav-menu a {
+    font-weight: bold;
+
+	
+}
+
+.section-restauant-food-menu .nav-menu a:hover{
+    font-weight: bold;
+    color: #53a2bd !important;
+
+	
+}
+
+
+.section-restaurant-food-types{
+    padding: 80px 0px;
+}
+
+.food-types-head{
+    font-weight: 300;
+    font-size: 150%;
+    padding-bottom: 20px;
+}
+.food-types-food {
+    padding: 3% 2%;
+    border: 1px solid #ececec;
+    margin: 10px 0px;
+}
+.dish-name {
+    padding: 5px 0px;
+    padding-top: 20px;
+}
+.dish-price {
+    color: #53a2bd;
+    font-weight: bold;
+    
+}
+.dish-price > strong {
+	color: #53a2bd;
+}
+
+.checkout-order {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 25px 0px;
+    border: 1px solid #fff;
+    
+
+    
+}
+.checkout-order > a {
+  font-weight: bold;
+  font-size: 120% !important;   
+  padding-left: 5em !important;
+  padding-right: 5em !important;    
+  text-align: center;
+    
+}
+.food-type-menu {
+	height: 70px;
+    font-weight: bold;
+    font-size: 100%
+    
+
+}
+.starter-padding{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   6. CHECKOUT PAGE
+   ========================================================================== */
+
+.section-checkout-page {
+    padding: 80px 0px;
+}
+
+
+.checkout-order-page{
+    text-align: left;
+}
+.checkout-order-page > p{
+    font-weight: bold;
+	
+}
+.checkout-order-page >h1 {
+	font-size: 150%;
+    padding: 20px 0px;
+}
+.checkout-heading {
+    font-size: 150%;
+}
+.checkout-padding-order{
+    margin-left: 4%;
+}
+
+/* ==========================================================================
+   6. REGISTER RESTAURANT PAGE
+   ========================================================================== */
+
+
+
+.section-register-restaurant{
+    padding: 80px 0px;
+}
+
+.restaurant-heading {
+    font-weight: 300;
+	font-size: 150%;
+}
+
+.register-restaurants {
+    padding: 3% 10%;
+    border: 1px solid #ececec;
+}
+.register-resto-heading {
+    font-size: 150%;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.move-right {
+	float: right !important;
+}
+.thankyou-padd {
+    padding: 30px 0px;
+}
+
+
+
+/* ==========================================================================
+   6. ABOUT US PAGE
+   ========================================================================== */
+
+.section-aboutus {
+	padding: 120px 0px;
+}
+.aboutus-heading {
+	font-size: 150%;
+}
+
+
+/* ==========================================================================
+   6. DASHBOARD PAGE
+   ========================================================================== */
+
+
+
+.dashmenu{
+    padding: 3% 10%;
+    margin: 20px 0px;
+    border: 1px solid #ececec;
+}
+.dashbutton {
+    padding: 10% 10%; 
+}
+
+.order-numb {
+margin-right: 20%;
+color: #fff;
+border-radius: 50%;
+padding:1px 7.5px;
+border: 1px solid #53a2bd;
+background-color: #53a2bd;
+}
+
+
+
+/* ==========================================================================
+   6. MangeRestaurant PAGE
+   ========================================================================== */
+
+
+
+
+.section-manage {
+    padding: 100px 0px;
+}
+
+.manage-heading {
+    font-size: 150%;
+    font-weight: 300a;
+    padding: 60px 0px;
+}
+
+#tab_container .container_item {
+  display: none;
+}
+
+#tab_container .container_item.is-active {
+  display: block;
+}
+.order-numb-tabs {
+    
+	margin-right: 20%;
+	color: #fff;
+	border-radius: 50%;
+	padding: 1px 7.5px;
+	border: 1px solid #53a2bd;
+	background-color: #53a2bd;
+	font-size: 15px;
+
+}
+.order-manage-tabs {
+    padding: 30px 20px;
+    margin: 50px 0px !important;
+}
+.order-manage-tabs-heading {
+    font-size: 120%;
+    font-weight:bold;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+.tab_box {
+	box-shadow: 0px 0px 0px 0px !important;
+}
+.element-box {
+	border-radius: 1px;
+    margin: 30px 0px;
+    
+}
+
+.order-manage-tabs-heading-comment {
+    font-size: 120%;
+    font-weight:bold;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    color: #939393;
+    text-align: left;
+    
+    
+}
+
+.order-manage-p {
+    color:#939393;
+  font-style: italic !important;
+}
+
+
+
+
+
+/* ==========================================================================
+   6. ManageRestaurantAccount  PAGE
+   ========================================================================== */
+
+.manage-res-account {
+    margin: 100px 0px;
+}
+.manage-res-heading-top {
+    font-size: 120%;
+    font-weight: bold;
+    padding:50px 0px; 
+}
+.manage-res-activity {
+    padding-bottom: 10px !important;
+    padding-top: 50px;
+    font-size: 120%;
+}
+
+.mange-res-acc-input {
+    width: 50px !important;
+    margin: 0px 5px;
+}
+
+.mange-rest-padding {
+   
+}
+
+
+
+/* ==========================================================================
+   2. DELETE ACCOUNT PAGE
+   ========================================================================== */
+
+
+.delete-account-section {
+    padding: 100px 0px;
+}
+
+.delete-heading-title {
+	padding: 40px 0px;
+    font-size: 120%;
+}
+
+
+
+/* ==========================================================================
+   Admin page
+   ========================================================================== */
+
+
+.active-is {
+   background-color:#53a2bd !inmportant;
+}
+
+.admin-header{
+     box-shadow:0px !important;
+    margin-bottom: 100px;
+    z-index: 1;
+}
+
+.admin-section{
+    margin-top: 30px;
+}
+.menu-list a.is-active {
+    background-color: #53a2bd;
+    color: #fff;
+}
+.votes-header{
+    padding: 20px 0px;
+    font-size: 120%;
+}
+.can-vot-size img{
+    width: 150px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.content figure {
+    margin-left: 0em; 
+     margin-right: 0em; 
+     text-align: left; 
+}
+.magin-left-righ{
+    margin-left: 10px;
+}
