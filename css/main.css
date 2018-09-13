@@ -147,7 +147,7 @@ input {
 
 
 .bg-intro {
-	background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.65)),url("../img/background.jpg");
+	background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.65)),url("../img/f24_supp_vote.png");
     padding: 50px;
     
     background-size: cover;
@@ -204,7 +204,6 @@ input {
 
 
 .hidden{
-    display: none;
 	
 }
 
@@ -222,7 +221,7 @@ input {
 }
 
 .sticky-logo-head{
-    width: 150px;
+    width: 75px;
     
     position: relative;
     top: 5%

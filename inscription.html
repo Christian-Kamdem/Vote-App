@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fungry</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="css/bulma.css">
 		   <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
 
@@ -14,9 +14,7 @@
                                   <link rel="stylesheet" href="css/responsive.css">
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="js/Jquery.js"></script>
-  
-    <script src="js/main.js"></script>
+    <script src="js/inscription.js"></script>
   </head>
   <body>
  
@@ -57,7 +55,7 @@
          <div class="field ">
          <label class="label">Nom</label>
           <p class="control ">
-        <input class="input" type="text" placeholder="E.g Lydia">
+        <input class="input" id="nom" type="text" placeholder="E.g Lydia">
         
         
          </p>
@@ -67,7 +65,7 @@
     
          <label class="label">Prenom</label>
           <p class="control">
-        <input class="input" type="text" placeholder="E.g Cousins">
+        <input class="input" id="prenom" type="text" placeholder="E.g Cousins">
        
         
          </p>
@@ -79,9 +77,9 @@
         
         
         <div class="field">
-         <label class="label">Email address</label>
+         <label class="label">Adresse email</label>
           <p class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="E.g name@example.com">
+        <input class="input" id="email" type="email" placeholder="E.g name@example.com">
         <span class="icon is-small is-left">
          <i class="fas fa-envelope"></i>
           </span>
@@ -92,7 +90,7 @@
         <div class="field">
          <label class="label">Date de naissance</label>
           <p class="control">
-        <input class="input" type="date" >
+        <input class="input" id="datnais" type="date" >
        
         
          </p>
@@ -101,10 +99,10 @@
         
         
        <div class="field">
-        <label class="label">Password</label>
+        <label class="label">Mot de passe</label>
 
         <p class="control has-icons-left">
-        <input class="input" type="password" placeholder="**********">
+        <input class="input" id="mdp" type="password" placeholder="**********">
         <span class="icon is-small is-left">
       <i class="fas fa-lock"></i>
        </span>
@@ -112,30 +110,22 @@
           </div>
            
             <div class="field">
-        <label class="label">Mobile phone</label>
+        <label class="label">Numero de telephone</label>
 
         <p class="control has-icons-left">
-        <input class="input" type="tel" placeholder="E.g +447563978054">
+        <input class="input" id="tel" type="tel" placeholder="E.g +447563978054">
         <span class="icon is-small is-left">
       <i class="fas fa-mobile"></i>
        </span>
         </p>
           </div>
-            <div class="field ">
-         <label class="label">Réponse secrète (en cas de mot  de pass oublié)</label>
-          <p class="control ">
-        <input class="input" type="text" placeholder="E.g Lydia">
-        
-        
-         </p>
-    </div>
          <br>
           
           
           
            <div class="field ">
-             <a href="" class=" button is-medium btn-fun-co is-fullwidth">
-                 Submit
+             <a id="envoyer" href="" class=" button is-medium btn-fun-co is-fullwidth">
+                 Envoyer
              </a>
           </div>
          </div>
@@ -166,15 +156,9 @@
   
     <!--section footer-->
   
-  
   <footer class="footer">
   <div class="container">
-  
-  <div class="columns">
-      <div class="column footer-logo">
-          <img src="img/fungry-logo.png" width="150" alt="" >
-      </div>
-  </div>
+
   
   
    <div class="columns">
@@ -182,70 +166,13 @@
            <ul>
                <li>
                   <a href="">
-                      About us
+                      Copyright Adrien 2018
                   </a> 
                </li>
                   
-                <li>
-            <a href="">
-                List your restaurant  
-            </a>            
-           </li>
-           <li>
-              <a href="">
-                  Deliver with  Fungry
-              </a> 
-           </li>
            </ul>
        </div>
-       <div class="column">
-           <ul>
-               <li>
-                  <a href="">
-                            Privacy
-                  </a>
-               </li>
-               <li>
-                  <a href="">
-                      Site Map 
-                  </a>
-               </li>
-               <li>
-                   <a href="">
-                       Terms and conditions
-                   </a>
-               </li>
-           </ul>
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-       </div>
-       <div class="column">
-           <ul>
-               <li>
-                  <a href="">
-                     Contact us  
-                  </a>
-               </li>
-               <li>
-                    <a href=" ">
-                        Faqs
-                    </a>
-               </li>
-               <li>
-                   <a href="">
-                       Cookies
-                   </a>
-               </li>
-           </ul>
-       </div>
+
    </div>
 
   </div>
