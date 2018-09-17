@@ -6,9 +6,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     const mdp = document.getElementById("mdp");
     const tel = document.getElementById("tel");
     const envoyer = document.getElementById("envoyer");
+    const result = document.getElementById("result");
     //Event click
     let formData = {
-        requestName:btoa(btoa(btoa("newDish"))),
+        requestName:btoa(btoa(btoa("inscription"))),
         data:{}
     };
     envoyer.addEventListener("click",()=>{
@@ -18,18 +19,16 @@ document.addEventListener("DOMContentLoaded",()=>{
         formData.data.datenais = datenais.value;
         formData.data.mdp = mdp.value;
         formData.data.tel = tel.value;
-        console.log(formData);
-    },false);
-    //
-    const urlToSend = "API/entryPoint.php";
-    let xhrSendAnnonce = new XMLHttpRequest();
+        
+        const urlToSend = "API/entryPoint.php";
+        let xhrSendAnnonce = new XMLHttpRequest();
                   xhrSendAnnonce.addEventListener("loadstart", () =>
                    {    
                    });
                   xhrSendAnnonce.addEventListener("load", () =>
                    {
                         let response = JSON.parse(xhrSendAnnonce.responseText);
-                        console.log(response);
+                        result.innerHTML = response.message;
                    });
                   xhrSendAnnonce.addEventListener("error",()=>{
                     //console.log(e.error);
@@ -37,4 +36,7 @@ document.addEventListener("DOMContentLoaded",()=>{
              xhrSendAnnonce.responseType = "text";
 	           xhrSendAnnonce.open('POST',urlToSend, true);
 	          xhrSendAnnonce.send(JSON.stringify(formData));
+        
+    },false);
+    //   
 });

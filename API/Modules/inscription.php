@@ -1,13 +1,13 @@
 <?php
 function inscription($data){
 	include 'Helpers/bd.php';
+    include 'Helpers/isEmailExist.php';
 	include 'Helpers/encrypt_password.php';
 	include 'Helpers/uploadFile.php';
 	$bd = bd();
 	//We check the kind of account for registration
 			if(isset($data->nom) AND isset($data->prenom) AND isset($data->email) AND isset($data->datenais)
-				AND isset($data->mdp) AND isset($data->tel)){
-				//For customer the type code is 2				
+				AND isset($data->mdp) AND isset($data->tel)){			
 					$nom = strip_tags($data->nom);
 					$prenom = strip_tags($data->prenom);
 					$email = strip_tags($data->email);
@@ -37,8 +37,8 @@ function inscription($data){
                               } 
 				}
 			}else{
-				return json_encode(array('message' => 'Number of insufficient parameters for customer registration!'));
+				return json_encode(array('message' => 'Veuillez remplir tous les champs!'));
 			}
-}
+
 }
 ?>
