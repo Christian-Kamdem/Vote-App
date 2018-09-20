@@ -11,10 +11,6 @@
               <link rel="stylesheet" href="css/animate.css">
               <link rel="stylesheet" href="css/responsive.css">
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="js/Jquery.js"></script>
-  
-    <script src="js/main.js"></script>
   </head>
   <body>
  
@@ -51,17 +47,9 @@
          
          
         <div class="field">
-         <label class="label">id</label>
-          <p class="control ">
-        <input class="input" type="number" min="1"  placeholder="1">
-        
-        
-         </p>
-        </div>
-        <div class="field">
-         <label class="label">Email addresse</label>
+         <label class="label">N° CNI</label>
           <p class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="E.g name@example.com">
+        <input id="cni" class="input" type="email" placeholder="">
         <span class="icon is-small is-left">
          <i class="fas fa-envelope"></i>
           </span>
@@ -72,7 +60,7 @@
         <label class="label">Mot de passe</label>
 
         <p class="control has-icons-left">
-        <input class="input" type="password" placeholder="**********">
+        <input id="mdp" class="input" type="password" placeholder="**********">
         <span class="icon is-small is-left">
       <i class="fas fa-lock"></i>
        </span>
@@ -80,19 +68,13 @@
           </div>
           <br>
           
-          <div class="field">
-              <p>
-                  <b>
-                     <a href="">Mot de passe oublié ? > </a> 
-                  </b>
-              </p>
-          </div>
           
            <div class="field ">
-             <a href="" class=" button is-medium btn-fun-co is-fullwidth">
+             <a id="envoyer" class=" button is-medium btn-fun-co is-fullwidth">
                  connexion
              </a>
           </div>
+              <p id="result"></p>
          </div>
          
          
@@ -131,7 +113,7 @@
 </footer>
 
   
- 
+ <script src="js/authentification.js"></script>
   
   </body>
 </html>

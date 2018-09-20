@@ -1,26 +1,18 @@
 document.addEventListener("DOMContentLoaded",()=>{
-    const nom = document.getElementById("nom");
-    const prenom = document.getElementById("prenom");
     const cni = document.getElementById("cni");
-    const datenais = document.getElementById("datenais");
-    const mdp = document.getElementById("mdp");
-    const tel = document.getElementById("tel");
-    const envoyer = document.getElementById("envoyer");
+    const prenom = document.getElementById("mdp");
     const result = document.getElementById("result");
+    const envoyer = document.getElementById("envoyer");
     //Event click
     let formData = {
-        requestName:btoa(btoa(btoa("inscription"))),
+        requestName:btoa(btoa(btoa("authentification"))),
         data:{}
     };
     envoyer.addEventListener("click",()=>{
-        formData.data.nom = nom.value;
-        formData.data.prenom = prenom.value;
         formData.data.cni = cni.value;
-        formData.data.datenais = datenais.value;
         formData.data.mdp = mdp.value;
-        formData.data.tel = tel.value;
-            
-            if(nom.value != "" && prenom.value != "" && cni.value != "" && mdp.value != "" && tel.value != ""){
+        
+            if(cni.value != "" && mdp.value != ""){
                 const urlToSend = "API/entryPoint.php";
                 let xhrSendAnnonce = new XMLHttpRequest();
                           xhrSendAnnonce.addEventListener("loadstart", () =>
@@ -29,11 +21,16 @@ document.addEventListener("DOMContentLoaded",()=>{
                           xhrSendAnnonce.addEventListener("load", () =>
                            {
                                 let response = JSON.parse(xhrSendAnnonce.responseText);
-                                result.innerHTML = response.message;
-                              if(response.message === 1){
+                              if(response.error === false){
                                   sessionStorage.setItem('isConnected', 'true');
-                                 document.location.replace('electeur.html');
-                                 }
+                                 if(response.data.cni === "admin@1234"){
+                                      document.location.replace('admin.html');
+                                  }else{
+                                      document.location.replace('electeur.html');
+                                  }                     
+                                }else{
+                                     result.innerHTML = response.message;
+                                }
                            });
                           xhrSendAnnonce.addEventListener("error",()=>{
                             //console.log(e.error);
@@ -41,7 +38,7 @@ document.addEventListener("DOMContentLoaded",()=>{
                      xhrSendAnnonce.responseType = "text";
                        xhrSendAnnonce.open('POST',urlToSend, true);
                       xhrSendAnnonce.send(JSON.stringify(formData));
-                }
+            }
         
     },false);
     //   

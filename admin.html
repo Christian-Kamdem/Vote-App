@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fungry</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="css/bulma.css">
              <link rel="stylesheet" href="css/animate.css">
 			 	   <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
@@ -12,10 +12,6 @@
        <link rel="stylesheet" href="css/main.css">
                      <link rel="stylesheet" href="css/responsive.css">
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="js/Jquery.js"></script>
-  
-    <script src="js/main.js"></script>
   </head>
   <body>
    
@@ -40,24 +36,14 @@
   <div class="navbar-menu" id="navMenu">
   
   
- 
-
-
-  <div class="navbar-end sticky-nav-position" >
-        <div class="navbar-item">
-            <div class="control">
-<a href="Login.html" class="button  btn-fun-li "> CONNEXTION</a>
-         </div>
+         <div class="navbar-item">
 
        </div>
         <div class="navbar-item">
         <div class="control">
-<a  href="Register.html" class="button  btn-fun-co">INSCRIPTIONS</a>   </div>
+<a class="button  btn-fun-co">DECONNEXION</a>   </div>
 
        </div>
-       
-      
-  </div>
 </div>
           
   </div>
@@ -78,32 +64,10 @@
     <p class="menu-label is-hidden-touch">Navigation</p>
     <ul class="menu-list">
       <li>
-        <a href="#" class="">
-          <span class="icon"><i class="fa fa-home"></i></span> Home
-        </a>
-      </li>
-      <li>
         <a href="#" class="is-active active-is">
-          <span class="icon"><i class="fa fa-table"></i></span> Links
+          <span class="icon"><i class="fa fa-table"></i></span> Options
         </a>
 
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon is-small"><i class="fa fa-link"></i></span> Link1
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon is-small"><i class="fa fa-link"></i></span> Link2
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="">
-          <span class="icon"><i class="fa fa-info"></i></span> About
-        </a>
       </li>
     </ul>
   </aside>
@@ -120,25 +84,159 @@
    
     <div class="section">
             <h1 class="votes-header">
-              Admin
+              Panel Administrateur
           </h1>
-      <div class="card">
-        <div class="card-header">
-        <p class="card-header-title">Admin</p></div>
-        <div class="card-content">
-        <div class="content">Description</div>
-         <a href="candidats.html" class="button btn-fun-co">
-             Choisir ce vote 
-         </a>
-            
-            <a href="candidats.html" class="button btn-fun-co magin-left-righ">
-             Choisir ce vote 
-         </a>
-        </div>
-      </div>
+
       <br/>
     
+             <div class="column is-5 login-fields">
+         
+        
+         <h1>
+            Panel de création de vote  
+         </h1>
+        
+         <div class="field ">
+         <label class="nom_election">Nom de l'élection</label>
+          <p class="control ">
+        <input class="input" id="nom" type="text" placeholder="Election presidentielle du 7 octobre">
+        
+        
+         </p>
+    </div>
+          
+            <div class="field">
+    
+         <label class="label">Libellé</label>
+          <p class="control">
+        <input class="input" id="libelle" type="text" placeholder="">
+       
+        
+         </p>
+   
+       
+             </div>
+       
+        <div class="field">
+    
+         <label class="label">Type d'election</label>
+            <div class="select">
+                <select>
+                    <option>Ouvert</option>
+                    <option>Ferme</option>
+                </select>
+            </div>
+                 </div>
+        
+        <div class="field">
+         <label class="label">Date de début</label>
+          <p class="control">
+        <input class="input" id="datedebut" type="date" >
+       
+        
+         </p>
+        </div>
+        <div class="field">
+         <label class="label">Date de fin</label>
+          <p class="control">
+        <input class="input" id="datedefin" type="date" >
+       
+        
+         </p>
+        </div>
+        
+        
+         <br>
+          
+          <span></span>
+          
+           <div class="field ">
+             <a id="ajout_vote" class=" button is-medium btn-fun-co is-fullwidth">
+                 Ajouter le vote
+             </a>
+          </div>
+             <p id="result"></p>
+         </div>
       
+    </div>
+    
+    
+    
+     <div class="section" style="width:70%;float:right;margin-right:-200px;margin-top:-720px;">
+
+      <br/>
+    
+             <div class="column is-5 login-fields">
+         
+        
+         <h1>
+            Ajout de nouvelle candidature
+         </h1>
+        
+         <div class="field ">
+         <label class="nom_election">Nom</label>
+          <p class="control ">
+        <input class="input" id="nom" type="text" placeholder="Nom du candidat">
+        
+        
+         </p>
+    </div>
+          
+            <div class="field">
+    
+         <label class="label">Adresse</label>
+          <p class="control">
+        <input class="input" id="adresse" type="text" placeholder="">
+       
+        
+         </p>
+       
+             </div>
+            <div class="field">
+    
+         <label class="label">Tel</label>
+          <p class="control">
+        <input class="input" id="tel" type="text" placeholder="">
+       
+        
+         </p>
+   
+       
+             </div>
+       
+                <div class="file">
+                  <label class="file-label">
+                    <input class="file-input" id="photo" type="file" name="resume">
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                      </span>
+                      <span class="file-label">
+                        Choose a file…
+                      </span>
+                    </span>
+                  </label>
+                </div>
+            <div class="field">
+                <label class="label">Desciption</label>
+                 <textarea id="description" class="textarea" placeholder=""></textarea>
+            </div>
+                 <div class="field">
+                <label class="label">Profession de foi du candidat</label>
+                 <textarea id="prof_foi" class="textarea" placeholder=""></textarea>
+            </div>
+        
+         <br>
+          
+          <span></span>
+          
+           <div class="field ">
+             <a id="ajout_candidat" class=" button is-medium btn-fun-co is-fullwidth">
+                 Ajouter le candidat
+             </a>
+          </div>
+             <p id="result"></p>
+         </div>
       
     </div>
   </div>
@@ -157,13 +255,8 @@
   
   
   <footer class="footer">
-  <div class="container">
-  
-  <div class="columns">
-      <div class="column footer-logo">
-          <img src="img/fungry-logo.png" width="150" alt="" >
-      </div>
-  </div>
+       <div class="container">
+
   
   
    <div class="columns">
@@ -171,80 +264,18 @@
            <ul>
                <li>
                   <a href="">
-                      About us
+                      Copyright Adrien 2018
                   </a> 
                </li>
                   
-                <li>
-            <a href="">
-                List your restaurant  
-            </a>            
-           </li>
-           <li>
-              <a href="">
-                  Deliver with  Fungry
-              </a> 
-           </li>
            </ul>
        </div>
-       <div class="column">
-           <ul>
-               <li>
-                  <a href="">
-                            Privacy
-                  </a>
-               </li>
-               <li>
-                  <a href="">
-                      Site Map 
-                  </a>
-               </li>
-               <li>
-                   <a href="">
-                       Terms and conditions
-                   </a>
-               </li>
-           </ul>
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-       </div>
-       <div class="column">
-           <ul>
-               <li>
-                  <a href="">
-                     Contact us  
-                  </a>
-               </li>
-               <li>
-                    <a href=" ">
-                        Faqs
-                    </a>
-               </li>
-               <li>
-                   <a href="">
-                       Cookies
-                   </a>
-               </li>
-           </ul>
-       </div>
+
    </div>
 
   </div>
    
 </footer>
- <section class="footer-bottom">
-      <p>
-     ©Fungry2018
-      </p>
-      </section>
   
   
   </body>

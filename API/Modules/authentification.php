@@ -5,32 +5,32 @@ function authentification($data){
 	include 'Helpers/encrypt_password.php';
 	$bd = bd();
 	$user = array();
-	if(isEmailExist($data->email,$bd) == false){
-		return json_encode(array('message' => 'Cette adresse mail n existe pas!')); 
+	if(isEmailExist($data->cni,$bd) == false){
+		return json_encode(array('message' => 'Cette CNI n existe pas!','error'=>true)); 
 	}else{
-		$email = strip_tags($data->email);
-		$mdp = complex_mdp($data->password);
+		$cni = strip_tags($data->cni);
+		$mdp = complex_mdp($data->mdp);
 		 try{
 			$request = $bd->prepare('SELECT *
 									  FROM members 
-									  WHERE email = ? AND mdp = ?');
-	        $request->execute([$email,$mdp]);
+									  WHERE cni = ? AND mdp = ?');
+	        $request->execute([$cni,$mdp]);
 			}catch(Exception $e){
 				return json_encode(array('message' => 'Database connection error!','error'=>true));
 			}	
 
 			if($request->rowCount() < 1){
-				return json_encode(array('message' => 'Not found','error'=>true));
+				return json_encode(array('message' => 'Aucun resultat trouver','error'=>true));
 			}else{
 
 				while($infos = $request->fetch()){
 					$user['nom'] = $infos['nom'];
 					$user['prenom'] = $infos['prenom'];
-					$user['email'] = $infos['email'];
+					$user['cni'] = $infos['cni'];
 					$user['photo'] = $infos['photo'];
 
 				}
-				return json_encode($user);
+				return json_encode(array('data'=>$user,'error'=>false));
 			}		
 		}
 }

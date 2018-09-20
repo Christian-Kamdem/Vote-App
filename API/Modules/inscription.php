@@ -6,32 +6,32 @@ function inscription($data){
 	include 'Helpers/uploadFile.php';
 	$bd = bd();
 	//We check the kind of account for registration
-			if(isset($data->nom) AND isset($data->prenom) AND isset($data->email) AND isset($data->datenais)
-				AND isset($data->mdp) AND isset($data->tel)){			
+			if(isset($data->nom) AND isset($data->prenom) AND isset($data->cni) AND isset($data->datenais)
+				AND isset($data->mdp) AND isset($data->tel)){		
 					$nom = strip_tags($data->nom);
 					$prenom = strip_tags($data->prenom);
-					$email = strip_tags($data->email);
+					$cni = strip_tags($data->cni);
 					$mdp = complex_mdp($data->mdp);
 					$tel = strip_tags($data->tel);
                     $datenais = strip_tags($data->datenais);
 				//We check if this customer already exist
-				if(isEmailExist($email,$bd) === true){
-					return json_encode(array('message' => 'Cette adresse existe!'));
+				if(isEmailExist($cni,$bd) === true){
+					return json_encode(array('message' => 'Cette CNI existe!'));
 				}else{
 					//Do tuff
 					try{
-                        $req = $bd->prepare('INSERT INTO members(nom,prenom,email,datenais,mdp,tel) 
-                        			VALUES(:nom, :prenom, :email, :datenais, :mdp, :tel)');
+                        $req = $bd->prepare('INSERT INTO members(nom,prenom,cni,datenais,mdp,tel) 
+                        			VALUES(:nom, :prenom, :cni, :datenais, :mdp, :tel)');
                         $req->execute(array(
                                                                              'nom' => $nom,
                                                                              'prenom' => $prenom,
-                                                                             'email' => $email,                                                                             
+                                                                             'cni' => $cni,                                                  
                                                                              'datenais' => $datenais,
                                                                              'mdp' => $mdp,
                                                                              'tel'=>$tel
 
                         ));
-                        return json_encode(array('message' => 'Nouveau membre ajouté!'));
+                        return json_encode(array('message' => 1));
                     }catch(Exception $i){
                                   return json_encode(array('message' => 'Erreur d enregistrement du nouveau membre!'));
                               } 
