@@ -8,7 +8,7 @@ function uploadFile($imagesList){
 	return $tab_nom;
 }
 function imageFromString($data){
-	     $repertoireUpload = '../images/';
+	     $repertoireUpload = '../img/';
 	     list($type, $data) = explode(';base64,', $data, 2);
 	     $data = str_replace(' ', '+', $data);
 	     $source = imagecreatefromstring(base64_decode($data));
@@ -18,10 +18,9 @@ function imageFromString($data){
 	     $imageName = openssl_digest($salt,'sha512').'.jpeg';
 	     file_put_contents($repertoireUpload.$imageName,$data);
 	     $imageSaved = imagejpeg($rotate,$repertoireUpload.$imageName,100);
-	     fct_redim_image(1300,1300,'','','',$repertoireUpload.$imageName);																			  
-		 copy($repertoireUpload.$imageName,$repertoireUpload.'/dish_image_1300px/'.$imageName);											  
-		 fct_redim_image(800,800,'','','',$repertoireUpload.$imageName);
-		 copy($repertoireUpload.$imageName,$repertoireUpload.'/dish_image_800px/'.$imageName);
+	     fct_redim_image(800,800,'','','',$repertoireUpload.$imageName);																			  
+		 copy($repertoireUpload.$imageName,$repertoireUpload.'/profils/'.$imageName);											  
+
 		 imagedestroy($source);    
 	     unlink($repertoireUpload.$imageName);
      return $imageName;

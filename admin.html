@@ -99,7 +99,7 @@
          <div class="field ">
          <label class="nom_election">Nom de l'élection</label>
           <p class="control ">
-        <input class="input" id="nom" type="text" placeholder="Election presidentielle du 7 octobre">
+        <input class="input" id="nom_election" type="text" placeholder="Election presidentielle du 7 octobre">
         
         
          </p>
@@ -121,7 +121,7 @@
     
          <label class="label">Type d'election</label>
             <div class="select">
-                <select>
+                <select id="type_election">
                     <option>Ouvert</option>
                     <option>Ferme</option>
                 </select>
@@ -139,7 +139,7 @@
         <div class="field">
          <label class="label">Date de fin</label>
           <p class="control">
-        <input class="input" id="datedefin" type="date" >
+        <input class="input" id="datefin" type="date" >
        
         
          </p>
@@ -151,11 +151,11 @@
           <span></span>
           
            <div class="field ">
-             <a id="ajout_vote" class=" button is-medium btn-fun-co is-fullwidth">
+             <a id="add_election" class=" button is-medium btn-fun-co is-fullwidth">
                  Ajouter le vote
              </a>
           </div>
-             <p id="result"></p>
+             <p id="result_add_election"></p>
          </div>
       
     </div>
@@ -181,6 +181,14 @@
         
          </p>
     </div>
+                 <div class="field">
+    
+         <label class="label">Election</label>
+            <div class="select">
+                <select id="candidate_election">
+                </select>
+            </div>
+                 </div>
           
             <div class="field">
     
@@ -231,11 +239,11 @@
           <span></span>
           
            <div class="field ">
-             <a id="ajout_candidat" class=" button is-medium btn-fun-co is-fullwidth">
+             <a id="add_candidate" class=" button is-medium btn-fun-co is-fullwidth">
                  Ajouter le candidat
              </a>
           </div>
-             <p id="result"></p>
+             <p id="result_add_candidate"></p>
          </div>
       
     </div>
@@ -277,7 +285,7 @@
    
 </footer>
   
-  
+   <script src="js/admin.js"></script>
   </body>
 </html>
   
