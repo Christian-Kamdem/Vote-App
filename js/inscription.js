@@ -29,10 +29,11 @@ document.addEventListener("DOMContentLoaded",()=>{
                           xhrSendAnnonce.addEventListener("load", () =>
                            {
                                 let response = JSON.parse(xhrSendAnnonce.responseText);
-                                result.innerHTML = response.message;
+                                //result.innerHTML = response.message;
                               if(response.message === 1){
                                   sessionStorage.setItem('isConnected', 'true');
-                                 document.location.replace('electeur.html');
+                                  alert("Inscription réussit!");
+                                  document.location.replace('connexion.html');
                                  }
                            });
                           xhrSendAnnonce.addEventListener("error",()=>{

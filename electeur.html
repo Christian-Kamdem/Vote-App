@@ -10,12 +10,11 @@
 
 
        <link rel="stylesheet" href="css/main.css">
+       <link rel="stylesheet" href="css/step.css">
+       <link rel="stylesheet" href="css/documentation.css">
                      <link rel="stylesheet" href="css/responsive.css">
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="js/Jquery.js"></script>
-  
-    <script src="js/main.js"></script>
+
   </head>
   <body>
    
@@ -71,39 +70,7 @@
 <section class="main-content columns is-fullheight admin-section">
 
 <!--side menu  section-->
- <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile">
-    <p class="menu-label is-hidden-touch">Navigation</p>
-    <ul class="menu-list">
-      <li>
-        <a href="#" class="">
-          <span class="icon"><i class="fa fa-home"></i></span> Home
-        </a>
-      </li>
-      <li>
-        <a href="#" class="is-active active-is">
-          <span class="icon"><i class="fa fa-table"></i></span> Links
-        </a>
 
-        <ul>
-          <li>
-            <a href="#">
-              <span class="icon is-small"><i class="fa fa-link"></i></span> Link1
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="icon is-small"><i class="fa fa-link"></i></span> Link2
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#" class="">
-          <span class="icon"><i class="fa fa-info"></i></span> About
-        </a>
-      </li>
-    </ul>
-  </aside>
   
   
   
@@ -114,71 +81,52 @@
 
 <div class="container column is-10">
           
-   
-    <div class="section">
-            <h1 class="votes-header">
-              liste des votes disponibles
-          </h1>
-      <div class="card">
-        <div class="card-header">
-        <p class="card-header-title">Nom du vote</p></div>
-        <div class="card-content">
-        <div class="content">Description</div>
-         <a href="candidats.html" class="button btn-fun-co">
-             Choisir ce vote 
-         </a>
-        </div>
-      </div>
-      <br/>
-        <div class="card">
-        <div class="card-header">
-        <p class="card-header-title">Nom du vote</p></div>
-        <div class="card-content">
-        <div class="content">Description</div>
-         <a href="candidats.html" class="button btn-fun-co">
-             Choisir ce vote 
-         </a>
-        </div>
-      </div>
-      <br/>
-        <div class="card">
-        <div class="card-header">
-        <p class="card-header-title">Nom du vote</p></div>
-        <div class="card-content">
-        <div class="content">Description</div>
-         <a href="candidats.html" class="button btn-fun-co">
-             Choisir ce vote 
-         </a>
-        </div>
-      </div>
-      <br/>
-        <div class="card">
-        <div class="card-header">
-        <p class="card-header-title">Nom du vote</p></div>
-        <div class="card-content">
-        <div class="content">Description</div>
-         <a href="candidats.html" class="button btn-fun-co">
-             Choisir ce vote 
-         </a>
-        </div>
-      </div>
-      <br/>
-        <div class="card">
-        <div class="card-header">
-        <p class="card-header-title">Nom du vote</p></div>
-        <div class="card-content">
-        <div class="content">Description</div>
-         <a href="candidats.html" class="button btn-fun-co">
-             Choisir ce vote 
-         </a>
-        </div>
-      </div>
-      <br/>
-      
-      
-      
-    </div>
-  </div>
+
+    
+    
+    
+    
+    
+    
+    
+
+<!-- multistep form -->
+    <hr/>
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Etape 1</li>
+    <li>Etape 2</li>
+    <li>Etape 3</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Veuillez insérer votre CNI pour continuer</h2>
+    <h3 class="fs-subtitle">Etape 1</h3>
+    <input type="text" name="email" placeholder="CNI" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Etape 2</h2>
+    <h3 class="fs-subtitle">Your presence on the social network</h3>
+    <input type="text" name="twitter" placeholder="Twitter" />
+    <input type="text" name="facebook" placeholder="Facebook" />
+    <input type="text" name="gplus" placeholder="Google Plus" />
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  <fieldset>
+    <h2 class="fs-title">Etape 3</h2>
+    <h3 class="fs-subtitle">We will never sell it</h3>
+    <input type="text" name="fname" placeholder="First Name" />
+    <input type="text" name="lname" placeholder="Last Name" />
+    <input type="text" name="phone" placeholder="Phone" />
+    <textarea name="address" placeholder="Address"></textarea>
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </fieldset>
+</form>
+
   
 
  
@@ -216,8 +164,11 @@
   </div>
 </footer>
 
-  
-  
+ <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+   
+     <script src="js/index.js"></script>
+   
   </body>
 </html>
   
